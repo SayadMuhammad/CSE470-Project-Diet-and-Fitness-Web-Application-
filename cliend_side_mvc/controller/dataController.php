@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
             
            header("Location: ../view/table.php");
            
-           echo '<script> alert(Information submited succesfully) </script';
+           echo '<script> alert(Information submited succesfully) </script>';
            
        }
  else{
