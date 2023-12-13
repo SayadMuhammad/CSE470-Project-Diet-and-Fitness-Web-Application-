@@ -1,6 +1,6 @@
 
 <?php
-require_once ('../model/adminReplyModel.php');
+require_once ('../model/complainModel.php');
 
 if(isset($_POST['submit'])){
     // include ("../model/adminmodel/r") 
@@ -8,21 +8,21 @@ if(isset($_POST['submit'])){
    
      $email =$_POST['email'];
      $subject=$_POST['subject'];
-     $reply =$_POST['reply'];
+     $description =$_POST['description'];
 
    
      
    
-     if($email==" " || $subject==" " || $reply== " "  )
+     if($email==" " || $subject==" " || $description== " "  )
      {
-        header("location:../view/replyBox.php");
+        header("location:../view/complain.php");
      }else{
 
-        $status=reply($email,$subject,$reply);
+        $status=complain($email,$subject,$description);
         if($status)
         {
             
-           header("Location: ../view/replyBox.php");
+           header("Location: ../view/clientProfile.php");
            
            echo '<script> alert(Information submited succesfully) </script';
            
