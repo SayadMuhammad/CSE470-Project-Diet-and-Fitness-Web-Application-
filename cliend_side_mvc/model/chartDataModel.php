@@ -3,7 +3,7 @@
 <?php
 
 
-//diet chart add
+//instructor registor
 function chartdata($email,$mealday,$saturday,$sunday,$monday,$tuesday,$wednesday,$thursday,$friday)
     {  
         $conn = mysqli_connect("localhost","root","","fitness") or die("Connection failed : " . mysqli_connect_error());

@@ -1,9 +1,12 @@
 <?php 
 
-$servername = "localhost"; // Replace with your server name
-$username = "root"; // Replace with your database username
-$password = ""; // Replace with your database password
-$dbname = "fitness"; // Replace with your database name
+
+
+
+// $servername = "localhost"; // Replace with your server name
+// $username = "root"; // Replace with your database username
+// $password = ""; // Replace with your database password
+// $dbname = "fitness"; // Replace with your database name
 
 // // Create connection
 // $conn = new mysqli("localhost", "root", "", "fitness");
@@ -23,16 +26,13 @@ $dbname = "fitness"; // Replace with your database name
 
 
 
-    function data($gender,$age,$height,$weight ,$checkbox,$history)
+    function registration($fullname,$email,$password)
     {  
         $conn = mysqli_connect("localhost","root","","fitness") or die("Connection failed : " . mysqli_connect_error());
         // $conn = new mysqli("localhost", "root", "", "fitness");
-        $sql1 = "INSERT INTO data(gender, age, height, weight, checkbox, history)
-         VALUES ('{$gender}', '{$age}', '{$height}', '{$weight}', '{$checkbox}', '{$history}')";
-
-        //   echo "<pre>";
-        //   print_r($sql1);
-        //   exit;
+        $sql1 =  "INSERT INTO user (name,email,password)
+                  VALUES ('{$fullname}','{$email}','{$password}')";
+       
     
         $result = mysqli_query($conn,$sql1);
         // $user= mysqli_fetch_assoc($result);
@@ -54,6 +54,24 @@ $dbname = "fitness"; // Replace with your database name
         }
     
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
